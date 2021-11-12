@@ -24,7 +24,7 @@ def verifyAndRenderRespective():
 
 		elif username == 'manager' and password == 'manager':
 
-			#res = runQuery('call delete_old()')
+			res = runQuery('call delete_old()')
 			return render_template('manager.html')
 
 		else:
@@ -379,11 +379,11 @@ def setPrice():
 
 def runQuery(query):
 	try:
-		global db = mysql.connector.connect(
+		db = mysql.connector.connect(
 			host='localhost',
 			database='theatre',
 			user='root',
-			password='root123')
+			password='',)
 
 		if db.is_connected():
 			print("Connected to MySQL, running query: ", query)
