@@ -1,23 +1,14 @@
 # CINEMA MANAGER
 ---
+Flask for backend. mysql for database
 ## RUN ON LINUX SERVER
+Mysql server already running. Log in to server using SSH, run:
 ```bash
-sudo mysql -u root -p
-```
-Enter password: root123
-
-```bash
-CREATE DATABASE theatre;
-exit;
-```
-Run
-```bash
-sudo mysql -u root -p < initialise.sql
+cd ktpmud/CineManagerDB
 python3 app.py
 ```
 ---
-## RUN ON WINDOWS
-
+## ON WINDOWS
 ```bash
 ssh  -N -f -L localhost:8081:localhost:5000 sang@128.199.128.140
 ```
